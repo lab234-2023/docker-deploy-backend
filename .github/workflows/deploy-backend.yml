@@ -51,6 +51,6 @@ jobs:
               mkdir 234-deploylab-backend
               cp docker-compose.yml 234-deploylab-backend/docker-compose.yml
               cd 234-deploylab-backend
-              docker-compose -H ${{ secrets.HOST_SERVICE }} down -remove-orphans
-              docker-compose -H ${{ secrets.HOST_SERVICE }} pull
-              docker-compose -H ${{ secrets.HOST_SERVICE }} up -d                                                                                                                                                                                                                                                                                         
+              docker-compose --host ${{ secrets.HOST_SERVICE }} down -remove-orphans
+              docker-compose --host ${{ secrets.HOST_SERVICE }} pull
+              docker-compose --host ${{ secrets.HOST_SERVICE }} up -d                                                                                                                                                                                                                                                                                         
