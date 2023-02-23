@@ -1,5 +1,5 @@
 name: Deploy backend to host
-'on'
+'on':
   push:
     branches: 
       - main
